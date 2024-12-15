@@ -1,3 +1,5 @@
+# Original taken from https://github.com/Pleut/abiotic-factor-linux-docker/blob/main/entrypoint.sh
+
 SetUsePerfThreads="-useperfthreads "
 if [[ $UsePerfThreads == "false" ]]; then
     SetUsePerfThreads=""
