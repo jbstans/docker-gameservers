@@ -27,6 +27,6 @@ stages:
           command: 'buildAndPush'
           Dockerfile: '$(serverName)/Dockerfile'
           tags: |
-            '$(Version)'
+            $(Version)
             latest
     
