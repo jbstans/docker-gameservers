@@ -7,7 +7,8 @@ RUN     /home/steam/steamcmd/steamcmd.sh \
 	    +force_install_dir /server \
 	    +login anonymous \
 	    +app_update 2857200 validate \
-	    +quit
+	    +quit && \
+	    cp /home/steam/steamcmd/steamcmd.sh /usr/local/bin/steamcmd
 
 COPY ./entrypoint.sh /entrypoint.sh
 RUN	dpkg --add-architecture i386 && \
