@@ -9,8 +9,6 @@ RUN     /home/steam/steamcmd/steamcmd.sh \
 	    +app_update 2857200 validate \
 	    +quit
 
-FROM debian:bookworm as final
-COPY --from=base /server /server
 COPY ./entrypoint.sh /entrypoint.sh
 RUN	dpkg --add-architecture i386 && \
 	apt update && apt install -y wget && \
@@ -19,6 +17,5 @@ RUN	dpkg --add-architecture i386 && \
 	wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bookworm/winehq-bookworm.sources && \
 	apt update && \
 	apt install -y --install-recommends winehq-stable
-EXPOSE 7777
 
 ENTRYPOINT ["bash", "/entrypoint.sh"]
