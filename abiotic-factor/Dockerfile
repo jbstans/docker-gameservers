@@ -10,7 +10,7 @@ RUN	    dpkg --add-architecture i386 && \
 	    apt update && \
 	    apt install -y --install-recommends winehq-stable
 USER 1000
-RUN         bash /home/steam/steamcmd.sh \
+RUN          /home/steam/steamcmd.sh \
 	    +@sSteamCmdForcePlatformType windows \
 	    +force_install_dir /server \
 	    +login anonymous \
