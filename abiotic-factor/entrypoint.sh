@@ -20,7 +20,7 @@ AdditionalArgs="${AdditionalArgs:-}"
 
 # Check for updates/perform initial installation
 if [ ! -d "/server/AbioticFactor/Binaries/Win64" ] || [[ $AutoUpdate == "true" ]]; then
-    /home/steam/steamcmd/linux32/steamcmd \
+    bash /home/steam/steamcmd.sh \
     +@sSteamCmdForcePlatformType windows \
     +force_install_dir /server \
     +login anonymous \
