@@ -18,7 +18,7 @@ stages:
       matrix:
         'abiotic-factor':
           servername: 'abiotic-factor'
-          Version: 1.0.0
+          Version: 1.0.1
     steps:
       - task: Docker@2
         inputs:
