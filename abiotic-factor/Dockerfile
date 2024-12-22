@@ -1,4 +1,4 @@
-FROM cm2network/steamcmd:steam-bookworm as base
+FROM cm2network/steamcmd:steam-bookworm
 USER 0
 RUN	    dpkg --add-architecture i386 && \
 	    mkdir /server && chmod 777 /server && \
